@@ -1,0 +1,145 @@
+:root {
+    --navy: #071b3a;
+    --blue: #0d47a1;
+    --bright-blue: #2f80ed;
+    --sky: #eaf4ff;
+    --ink: #102a43;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    background: linear-gradient(135deg, #dbeeff 0%, #f7fbff 48%, #c7e2ff 100%);
+    color: var(--ink);
+    margin: 0;
+    min-height: 100vh;
+}
+
+nav {
+    align-items: center;
+    background: linear-gradient(105deg, var(--navy), var(--blue));
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 22px 20px;
+}
+
+nav a {
+    border-radius: 999px;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.home-content {
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 76px 24px 90px;
+}
+
+.hero {
+    margin: 0 auto 56px;
+    max-width: 720px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--bright-blue);
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 16px;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: var(--navy);
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    margin: 0 0 22px;
+}
+
+.hero > p:last-child {
+    color: #496581;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.cards {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(47, 128, 237, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 18px 38px rgba(21, 76, 128, 0.12);
+    display: flex;
+    flex-direction: column;
+    min-height: 265px;
+    padding: 28px;
+    text-align: left;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 22px 45px rgba(21, 76, 128, 0.2);
+    transform: translateY(-6px);
+}
+
+.card-number {
+    color: var(--bright-blue);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.card h2 {
+    color: var(--navy);
+    font-size: 1.35rem;
+    margin: 30px 0 12px;
+}
+
+.card p {
+    color: #496581;
+    line-height: 1.6;
+    margin: 0 0 22px;
+}
+
+.card a {
+    color: var(--blue);
+    font-weight: bold;
+    margin-top: auto;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: var(--bright-blue);
+}
+
+@media (max-width: 760px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .home-content {
+        padding: 56px 20px 64px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
